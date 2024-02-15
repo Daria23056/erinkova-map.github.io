@@ -1,0 +1,54 @@
+body {margin: 0; padding: 0;}
+
+.map {
+	position: relative;
+	text-align: center;
+}
+
+/*Изменение обводки*/
+svg {
+	position: absolute;
+	top: -1px;
+	left: +3px;
+	height: 100%;
+	width: 100%;
+}
+
+.part {
+	opacity: .3;
+}
+
+.part:hover {
+	transition: opacity .2s ease;
+	opacity: .100;
+	cursor: pointer;
+}
+
+/* всплывающей карточки*/
+.description {
+	display: none;
+	position: absolute;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 20%;
+	left: 12%;
+	font-family: sans-serif;
+	top: 15%;
+}
+
+.description img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.map svg path {
+    fill: none; /* Убираем обводку */
+    pointer-events: all; /* Разрешаем быть целью событий мыши */
+    cursor: pointer; /* Меняем курсор при наведении */
+}
+.map svg path:hover {
+    animation: hoverElement 2s linear infinite; /* При наведении включаем анимацию */
+}
+
+
+
